@@ -9,7 +9,37 @@
     <title>Browser Form</title>
 </head>
 <body>
-    <form action="">
+    <form action="" novalidate>
+
+        <legend id="header">Log-in</legend>
+
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="email">E-mail Address</label>
+            <input type="email" name="email" id="email" required minlength="8">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" id="passwordConfirm" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Location</legend>
+
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country" placeholder="Canada" required>
+
+            <label for="zipCode">Zip Code</label>
+            <input type="text" id="zipCode" name="zipCode" required minlength="6" maxlength="6">
+
+        </fieldset>
+
+        <span class="error"></span>
+
+        <button type="submit">Submit</button>
 
     </form>
 </body>
